@@ -1,0 +1,30 @@
+[{
+  "title": "The Confident",
+  "images": [
+    "/assets/media/slide1.png",
+    "/assets/media/slide1-1.png",
+    "/assets/media/slide1-2.png",
+    "/assets/media/slide1-3.png"
+  ]
+}, {
+  "title": "The Lazy",
+  "images": [
+    "/assets/media/slide2.png",
+    "/assets/media/slide2-1.png",
+    "/assets/media/slide2-2.png"
+  ]
+}, {
+  "title": "The Bully",
+  "images": [
+    "/assets/media/slide3.png",
+    "/assets/media/slide3-1.png",
+    "/assets/media/slide3-2.png"
+  ]
+}, {
+  "title": "The Birds Class",
+  "images": [
+    "/assets/media/slide4.png",
+    "/assets/media/slide4-1.png",
+    "/assets/media/slide4-2.png"
+  ]
+}]
