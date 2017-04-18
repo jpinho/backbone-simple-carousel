@@ -7,7 +7,8 @@ It comes with a NodeJS server that servers some sample data and also integrates 
 
 ## Project Run Book
 
-- git clone this repo
+- `git clone <this_repo>`
+- `cd backbone-simple-carousel` 
 - run `npm install`
 - run `npm start`
 - open your browser and type the address http://localhost:9000
@@ -26,7 +27,7 @@ CarouselView received the following parameters:
 
 |param|type|default|description|
 |:--|:--|:--|:--|
-|width|int|1024|The Carousel container width|
-|height|int|480|The Carousel container height|
-|blocksToDisplay|4|int|The number of blocks to display|
-|model| [{title: String, images: ArrayOf(String)}, ...]|null|The model containing the data to display|
+|width|`int`|1024|The Carousel container width|
+|height|`int`|480|The Carousel container height|
+|blocksToDisplay|`int`|4|The number of blocks to display|
+|model|`[{title: String, images: ArrayOf(String)}, ...]`|null|The model containing the data to display|
