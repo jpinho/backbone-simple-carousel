@@ -53,7 +53,7 @@ module.exports = {
     ],
     loaders: [
       {test: /\.jsx?$/, loaders: ['react-hot', 'babel?experimental&blacklist[]=validation.react'], exclude: /node_modules/},
-      {test: /\.scss$/, loaders: ['style', 'css', 'autoprefixer', 'sass']},
+      {test: /\.scss$/, loaders: ['style', 'css', 'sass']},
       {test: /\.sass$/, loader: "sass-loader", exclude: /node_modules/ },
       {test: /\.css$/, loaders: ['style', 'css', 'autoprefixer']},
       {test: /\.json$/, loaders: ['json']},

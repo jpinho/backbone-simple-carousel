@@ -38,7 +38,7 @@ define([
 			this.listenTo(this.model, 'change', this.render)
 			this.$width = !this.model.width ? this.DEFAULT_WIDTH : this.model.width
 			this.$height = !this.model.height ? this.DEFAULT_HEIGHT : this.model.height
-			this.$blocksToDisplay = this.model.blocksToDisplay <= 0 ? this.DEFAULT_BLOCKS_TO_DISPLAY : this.model.blocksToDisplay
+			this.$blocksToDisplay = !this.model.blocksToDisplay ? this.DEFAULT_BLOCKS_TO_DISPLAY : this.model.blocksToDisplay
 		},
 
 		render: function () {
