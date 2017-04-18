@@ -20,8 +20,10 @@ define([
 	})
 
 	const CarouselView = Backbone.View.extend({
-		DEFAULT_WIDTH: 800,
+		DEFAULT_WIDTH: 1024,
 		DEFAULT_HEIGHT: 480,
+		CONTAINER_WIDTH_GAP: 100,
+		DEFAULT_BLOCKS_TO_DISPLAY: 4,
 
 		tagName: 'div',
 		className: 'carousel-container',
@@ -36,13 +38,13 @@ define([
 			this.listenTo(this.model, 'change', this.render)
 			this.$width = !this.model.width ? this.DEFAULT_WIDTH : this.model.width
 			this.$height = !this.model.height ? this.DEFAULT_HEIGHT : this.model.height
+			this.$blocksToDisplay = !this.model.blocksToDisplay ? this.DEFAULT_BLOCKS_TO_DISPLAY : this.model.blocksToDisplay
 		},
 
 		render: function () {
 			this.$el.html(this.template())
 			this.$el.width(this.$width)
 			this.$el.height(this.$height)
-
 			this.$items = this.$el.find('.items')
 
 			this.model.forEach((item) => {
@@ -51,15 +53,16 @@ define([
 						model: {
 							...item,
 							displayImage: item.images[ Math.round( Math.random() * (item.images.length - 1) ) ],
-							holderJsDimensions: `${this.$width}x${this.$height}`,
-							imageWidth: this.$width
+							holderJsDimensions: `${this.$width / this.$blocksToDisplay}x${this.$height}`,
+							imageWidth: this.$width / this.$blocksToDisplay,
+							imageHeight: this.$height
 						}
 					}).render().$el
 				)
 			})
 
 			this.$items.children().first().addClass('active')
-			this.$items.width(this.$items.children().length * this.$width + 100 /*gap*/)
+			this.$items.width(this.$items.children().length * this.$width + this.CONTAINER_WIDTH_GAP)
 			return this
 		},
 
@@ -69,28 +72,24 @@ define([
 				return
 			}
 
-			let $prev = $(this.$items.children().get($active.index() - 1))
-
-			// slide effect
-			this.$items.css('transform', 'translateX(' + ($prev.index() * -this.$width) + 'px)')
-
-			$active.removeClass('active')
-			$prev.addClass('active')
+			let $prev = $(this.$items.children().get($active.index() - this.$blocksToDisplay))
+			this.slideTo($active, $prev)
 		},
 
 		next: function() {
 			let $active = this.$items.find('.active')
-			if ($active.index() === (this.$items.children().length - 1)) {
+			if (($active.index() + this.$blocksToDisplay) > (this.$items.children().length - 1)) {
 				return
 			}
 
-			let $next = $(this.$items.children().get($active.index() + 1))
+			let $next = $(this.$items.children().get($active.index() + this.$blocksToDisplay))
+			this.slideTo($active, $next)
+		},
 
-			// slide effect
-			this.$items.css('transform', 'translateX(' + ($next.index() * -this.$width) + 'px)')
-
+		slideTo: function($active, $target) {
+			this.$items.css('transform', 'translateX(' + (($target.index() / this.$blocksToDisplay) * -this.$width) + 'px)')
 			$active.removeClass('active')
-			$next.addClass('active')
+			$target.addClass('active')
 		}
 	})
 
