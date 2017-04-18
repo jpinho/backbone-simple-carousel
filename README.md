@@ -7,7 +7,8 @@ It comes with a NodeJS server that servers some sample data and also integrates 
 
 ## Project Run Book
 
-- git clone this repo
+- `git clone <this_repo>`
+- `cd backbone-simple-carousel` 
 - run `npm install`
 - run `npm start`
 - open your browser and type the address http://localhost:9000
