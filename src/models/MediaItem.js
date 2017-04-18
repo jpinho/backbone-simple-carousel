@@ -1,4 +1,4 @@
-import { Model } from 'backbone';
+import { Model } from 'backbone'
 
 class MediaItem extends Model {
   defaults() {
@@ -9,4 +9,4 @@ class MediaItem extends Model {
   }
 }
 
-export default MediaItem;
+export default MediaItem

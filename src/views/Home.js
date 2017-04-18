@@ -1,4 +1,3 @@
-/*global define*/
 define([
 	'jquery',
 	'underscore',
@@ -6,13 +5,13 @@ define([
 	'components/Carousel',
 	'collections/MediaCollection'
 ], function ($, _, Backbone, CarouselView, MediaCollection) {
-	'use strict';
+	'use strict'
 
 	var HomeView = Backbone.View.extend({
 		el: '#home',
 
 		initialize: function () {
-			this.listenTo(MediaCollection, 'all', this.render);
+			this.listenTo(MediaCollection, 'all', this.render)
 			MediaCollection.fetch({reset:true})
 		},
 
@@ -22,11 +21,11 @@ define([
 					model: MediaCollection.toArray().map((item) => item.toJSON())
 				}).render().$el
 
-				this.$el.html($carousel);
+				this.$el.html($carousel)
 			}
-			return this;
+			return this
 		}
-	});
+	})
 
-	return HomeView;
-});
+	return HomeView
+})

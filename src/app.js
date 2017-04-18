@@ -9,4 +9,4 @@ Backbone.history.start()
 
 $(function() {
   new HomeView()
-});
+})
