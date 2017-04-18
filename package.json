@@ -30,6 +30,7 @@
   },
   "scripts": {
     "start": "node server.js",
-    "test": "true"
+    "test": "true",
+    "build": "NODE_ENV=production node_modules/.bin/webpack --profile --optimize-dedupe"
   }
 }
