@@ -30,4 +30,4 @@ CarouselView received the following parameters:
 |model.width|`int`|1024|The Carousel container width|
 |model.height|`int`|480|The Carousel container height|
 |model.blocksToDisplay|`int`|4|The number of blocks to display|
-|model|`[{title: String, images: ArrayOf(String)}, ...]`|null|The model containing the data to display|
+|model.items|`[{title: String, images: ArrayOf(String)}, ...]`|null|The model containing the data to display|
