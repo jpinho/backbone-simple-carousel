@@ -23,7 +23,7 @@ You can either use just the CarouselView on your project, or use just the boiler
 CarouselView received the following parameters:
 
 |param|type|default|description|
-|--|--|--|--|
+|:--|:--|:--|:--|
 |width|int|1024|The Carousel container width|
 |height|int|480|The Carousel container height|
 |blocksToDisplay|4|int|The number of blocks to display|
