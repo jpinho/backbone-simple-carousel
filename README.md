@@ -3,7 +3,7 @@
 This project can be used as a boilerplate of BackboneJS using Webpack and Babel, enabling us to write plain ES6 code. 
 It comes with a NodeJS server that servers some sample data and also integrates with Webpack Dev Server.
 
-![Simple Carousel](http://github.com/jpinho/backbone-simple-carousel/demo.gif)
+![Simple Carousel](https://github.com/jpinho/backbone-simple-carousel/raw/master/demo.gif)
 
 ## Project Run Book
 
