@@ -20,6 +20,8 @@ You can either use just the CarouselView on your project, or use just the boiler
 
 ### CarouselView
 
+A Carousel Component developed without any external plugins, except for the BackboneJS wrapping utilities and Underscore templating engine to render the HTML.
+
 CarouselView received the following parameters:
 
 |param|type|default|description|
