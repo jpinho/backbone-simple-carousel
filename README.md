@@ -5,6 +5,9 @@ It comes with a NodeJS server that servers some sample data and also integrates 
 
 ![Simple Carousel](https://github.com/jpinho/backbone-simple-carousel/raw/master/demo.gif)
 
+## Build Status
+[![Build Status](https://travis-ci.org/jpinho/backbone-simple-carousel.svg?branch=master)](https://travis-ci.org/jpinho/backbone-simple-carousel)
+
 ## Project Run Book
 
 - `git clone <this_repo>`
