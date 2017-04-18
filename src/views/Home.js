@@ -18,7 +18,12 @@ define([
 		render: function () {
 			if (MediaCollection.length) {
 				const $carousel = new CarouselView({
-					model: MediaCollection.toArray().map((item) => item.toJSON())
+					model: {
+						width: 1024,
+						height: 480,
+						blocksToDisplay: 4,
+						items: MediaCollection.toArray().map((item) => item.toJSON())
+					}
 				}).render().$el
 
 				this.$el.html($carousel)
